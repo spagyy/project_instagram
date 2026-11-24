@@ -1,3 +1,6 @@
+
+-- SELECTY
+
 SELECT * FROM users;
 SELECT * FROM posts;
 SELECT * FROM comments;
@@ -44,5 +47,21 @@ SELECT COUNT(*) AS posts_count FROM posts;
 SELECT COUNT(*) AS comments_count FROM comments;
 SELECT COUNT(*) AS likes_count FROM likes;
 
+-- UPDATY
 
+UPDATE users SET last_name='Bílá' WHERE id = 4;
+UPDATE users SET first_name='Petr';
 
+-- DELETY
+
+DELETE FROM users WHERE email LIKE '%a%';
+DELETE FROM users WHERE first_name='Tereza';
+DELETE FROM users WHERE id = 3;
+
+-- ALTER TABLE
+
+ALTER TABLE users ADD birth_days DATE;
+
+-- DROP TABLE
+
+DROP TABLE IF EXISTS posts;
